@@ -1,5 +1,5 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+	// import successkid from 'images/successkid.jpg';
 </script>
 
 <style>
@@ -19,12 +19,12 @@
 		margin: 0 0 1em 0;
 	}
 
-	img {
+	/* img {
 		width: 100%;
 		max-width: 400px;
 		margin: 0 0 1em 0;
-	}
-
+	} */
+	
 	p {
 		margin: 1em auto;
 	}
@@ -43,7 +43,7 @@
 <h1>Great success!</h1>
 
 <figure>
-	<img alt="Success Kid" src="{successkid}">
+	<!-- <img alt="Success Kid" src="{successkid}"> -->
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
