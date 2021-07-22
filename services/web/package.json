@@ -3,10 +3,12 @@
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
+    "dev": "run-p dev:*",
+    "dev:firebase": "npm run dev --prefix firebase",
+    "dev:sapper": "sapper dev",
     "deploy:firebase": "npm run deploy --prefix firebase",
     "deploy:clean": "rm -fr __sapper__ ./firebase/public",
     "deploy": "run-s deploy:clean export deploy:firebase",
-    "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export ./firebase/public --legacy",
     "start": "node __sapper__/build",
