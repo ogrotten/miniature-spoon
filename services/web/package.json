@@ -10,7 +10,7 @@
     "deploy:clean": "rm -fr __sapper__ ./firebase/public",
     "deploy": "run-s deploy:clean export deploy:firebase",
     "build": "sapper build --legacy",
-    "export": "sapper export ./firebase/public --legacy",
+    "export": "NODE_ENV=production sapper export ./firebase/public --legacy",
     "start": "node __sapper__/build",
     "postinstall": "npm install --prefix firebase"
   },
@@ -23,8 +23,6 @@
     "sirv": "^1.0.0"
   },
   "devDependencies": {
-    "sapper": "^0.28.0",
-    "svelte": "^3.17.3",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
@@ -35,8 +33,14 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@rollup/plugin-replace": "^2.4.0",
     "@rollup/plugin-url": "^5.0.0",
+    "cypress": "^8.0.0",
+    "postcss": "^8.3.6",
     "rollup": "^2.3.4",
     "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0"
+    "rollup-plugin-terser": "^7.0.0",
+    "sapper": "^0.28.0",
+    "svelte": "^3.17.3",
+    "svelte-preprocess": "^4.7.4",
+    "tailwindcss": "^2.2.6"
   }
 }
