@@ -1,0 +1,19 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - master
+      - add-github-deployment-action
+jobs: 
+  deploy:
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm Install
+      - name: Bootstrap all services
+        run: npm run bootstrap
+      - name: Deploy the web service
+        run: npm run deploy --prefix services/web
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
