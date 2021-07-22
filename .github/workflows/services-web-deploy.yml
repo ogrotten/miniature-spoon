@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: npm Install
+        run: npm install
       - name: Bootstrap all services
         run: npm run bootstrap
       - name: Deploy the web service
